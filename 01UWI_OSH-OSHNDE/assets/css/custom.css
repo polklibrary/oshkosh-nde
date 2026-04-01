@@ -1,0 +1,94 @@
+header {
+    background-color: #222 !important;
+    border-bottom: 5px solid #E3BF42 !important;
+}
+
+header li svg, header mat-select svg , header mat-icon svg {
+    filter: invert(1) brightness(5);
+}
+header li span, header mat-select span , header mat-icon span {
+    color: #fff;
+}
+
+
+nde-logo img {
+    height: initial;
+    margin-bottom: -5px;
+    padding: 0 15px 0  0px;
+}
+
+
+.top-bar-background-image {
+    background-image: url(../images/background4.png) !important; 
+    border-bottom: 10px solid #222;
+}
+
+.custom-search-bar-container .background-overlay {
+    display: none;
+}
+
+
+
+
+/* LIBCHAT START ----------------------------------------------------------- */
+.lib-chat {
+    animation: LibChatFadeIn 1s linear 1s forwards;
+    opacity: 0;
+    position: fixed;
+    bottom: 77px;
+    right: 80px;
+    z-index: 1000000;
+}
+
+.lib-chat a {
+    text-decoration: none !important;
+    border-bottom: 0 none !important;
+    box-shadow: none !important;
+    position: relative;
+}
+
+.lib-chat img {
+    height: 56px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.lib-chat img.libchat-mobile-on:nth-child(1){
+    z-index:0;
+    animation: LibChatFold 2s ease 1s forwards;
+}
+.lib-chat img.libchat-mobile-on:nth-child(2){
+    z-index:1;
+    animation: LibChatSpin 2s linear 1s forwards;
+}
+
+@media (min-width: 0px) and (max-width:959px){
+    .lib-chat {
+        animation: LibChatFadeIn 1s linear 1s forwards;
+        opacity: 0;
+        position: fixed;
+        bottom: 77px;
+        right: 10px;
+        z-index: 1000000;
+    }
+    .lib-chat img {
+        height: 56px !important;
+    }
+}
+
+@keyframes LibChatFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes LibChatFold {
+    from { transform: rotateY(0deg); transform-origin: 75%; }
+    to   { transform: rotateY(90deg); transform-origin: 75%; }
+}
+
+@keyframes LibChatSpin {
+    from { transform: rotate(0deg); transform-origin: center; }
+    to   { transform: rotate(360deg); transform-origin: center; }
+}
+/* LIBCHAT END ----------------------------------------------------------- */
